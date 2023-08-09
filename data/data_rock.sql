@@ -14,14 +14,22 @@ create table musico(
     FOREIgn KEY (id_banda) references banda(id_banda)
 )
 
-create table pruheba(){
-  id int ,
+create table pruheba(
+  id int primary key AUTO_INCREMENT,
   nombre varchar(50)
-}
+)
+create table rock(
+  id int primary key AUTO_INCREMENT ,
+  nombre varchar(50)
+)
 
 ALTER TABLE banda ADD descripcion VARCHAR (350) NOT NULL;
 ALTER TABLE musico modify nombre VARCHAR(300);
 ALTER TABLE banda DROP descripcion;
 
 TRUNCATE TABLE pruheba;
-delete TABLE pruheba;
+delete from rock;
+
+drop table rock
+
+insert into banda (banda) values ("Guns and Roses")
